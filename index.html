@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Générateur de mot de passe</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="style.css" />
+        <script src="scripts/passgen.js" async></script>
+    </head>
+
+    <body>
+        <header>
+            <h1>Générateur de mot de passe</h1>
+        </header>
+
+        <main>
+            <section id="section-result">
+                <h2>Votre mot de passe</h2>
+                <article id="display-result">
+                    <p id="display-strength">Force : 
+                        <output id="strength-output"></output>
+                    </p>
+
+                    <div>
+                        <output id="your-password"></output>
+                    </div>
+                </article>
+
+                <article id="action-buttons">
+                    <output id="copy-state"></output>
+
+                    <button type="button" name="copy-button" id="copy-button" class="custom-button">Copier</button>
+
+                    <button type="button" name="generate-button" id="generate-button" class="custom-button">Générer</button>
+                </article>
+            </section>
+
+            <section id="section-config">
+                <h2>Configuration</h2>
+                <article id="article-input">
+                    <div id="length-range">
+                        <p>Longueur : <span id="range-value"></span> caractères</p>
+
+                        <p>
+                            <span>4</span>
+                            <input type="range" name="pass-length" id="pass-length" min="4" max="64" value="12" step="1">
+                            <span>64</span>
+                        </p>
+                    </div>
+
+                    <div id="all-checkboxes">
+                        <div class="chars-checkbox">
+                            <label for="upper-chars">Majuscules (A...Z)</label>
+                            <input type="checkbox" name="upper-chars" id="upper-chars" checked>
+                        </div>
+
+                        <div class="chars-checkbox">
+                            <label for="lower-chars">Minuscules (a...z)</label>
+                            <input type="checkbox" name="lower-chars" id="lower-chars" checked>
+                        </div>
+
+                        <div class="chars-checkbox">
+                            <label for="digit-chars">Chiffres (0...9)</label>
+                            <input type="checkbox" name="digit-chars" id="digit-chars" checked>
+                        </div>
+
+                        <div class="chars-checkbox">
+                            <label for="special-chars">Caractères spéciaux (+-.?!_$%@#)</label>
+                            <input type="checkbox" name="special-chars" id="special-chars" checked>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </main>
+    </body>
+</html>

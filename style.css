@@ -1,0 +1,172 @@
+/*
+    STYLES GLOBAUX
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    padding: 2rem 1rem;
+    text-align: center;
+    background-color: #32cd32;
+    color: white;
+}
+
+main {
+    width: 100%;
+    border: 1px solid #ccc;
+}
+
+h2 {
+    font-weight: normal;
+}
+
+section {
+    padding: 1rem;
+}
+
+article {
+    margin-top: 1rem;
+}
+
+#display-result {
+    text-align: center;
+    border-top: 1px solid #32cd32;
+    border-bottom: 1px solid #32cd32;
+    border-left: none;
+    border-right: none;
+    padding: 0.5rem;
+    position: sticky;
+    top: 10px;
+    background-color: white;
+}
+
+#display-result p {
+    padding: 0.3rem 1rem;
+    color: white;
+}
+
+#strength-output {
+    font-weight: bold;
+}
+
+#display-result div {
+    border: 1px solid #ccc;
+    margin-top: 0.5rem;
+    padding: 0.8rem;
+    overflow: auto;
+}
+
+#action-buttons {
+    padding: 0.5rem;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+#copy-state {
+    padding: 0.5rem;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+.custom-button {
+    text-transform: uppercase;
+    margin-top: 0.5rem;
+    border: none;
+    background-color: #32cd32;
+    color: white;
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+
+#article-input {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+}
+
+#length-range input {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+#length-range p:last-child, .chars-checkbox {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#length-range input, .chars-checkbox label {
+    width: 100%;
+}
+
+#all-checkboxes {
+    margin-top: 1.5rem;
+}
+
+.chars-checkbox label {
+    padding-right: 0.5rem;
+}
+
+
+/* Classes gérées par Javascript */
+
+.strong-password {
+    background-color: #229322;
+}
+
+.medium-password {
+    background-color: #ffd800;
+}
+
+.weak-password {
+    background-color: red;
+}
+
+.show-element {
+    display: block;
+}
+
+.hide-element {
+    display: none;
+}
+
+
+@media screen and (min-width: 768px) {
+    header, main {
+        width: 60%;
+        margin: auto;
+    }
+
+    #action-buttons {
+        flex-flow: row wrap;
+        justify-content: space-around;
+    }
+
+    #copy-state {
+        flex: 0 0 90%;
+    }
+
+    .custom-button {
+        flex: 0 0 45%;
+    }
+}
+
+
+@media screen and (min-width: 1024px) {
+    #all-checkboxes {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+
+    .chars-checkbox {
+        flex: 0 0 40%;
+    }
+}
